@@ -12,8 +12,6 @@ if(isset($data->name)){
     
     $addUser = mysqli_query($db_conn, "INSERT INTO product(id,name,price) VALUES(0,'$name','$price')");
 
-    echo $addUser;
-    
     if($addUser){
         echo json_encode(["success" => 1, "message" => 'success add product']);
     } else {
